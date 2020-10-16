@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
-            android:text="가격 : 1500원 \n원산지 : 청"
+            android:text="가격 : 1500원 \n원산지 : 인도"
             android:textSize="20dp" />
     </LinearLayout>
     <View
@@ -82,7 +82,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="가격 : 1000원 \n원산지 : "
+            android:text="가격 : 1000원 \n원산지 : 충주"
             android:textSize="20dp" />
     </LinearLayout>
     <View
@@ -122,7 +122,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="30dp"
             android:layout_weight="1"
-            android:text="가격 : 3000원 \n원산지 : 청"
+            android:text="가격 : 3000원 \n원산지 : 성주"
             android:textSize="20dp" />
     </LinearLayout>
     <View
