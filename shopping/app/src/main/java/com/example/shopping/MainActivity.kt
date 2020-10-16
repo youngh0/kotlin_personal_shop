@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
-    var price:Int = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -28,30 +28,32 @@ class MainActivity : AppCompatActivity() {
 
             }else{ // 바로 구매를 누르는 경우여서 price변수를 0으로 초기화
                 price = 0
+                // 구매목록 데이터베이스에 체크 된 항목 추가하기
                 if(checkBox_banana.isChecked){
-                    myCart.put("banana",1500)   // 체크 되어있는걸 myCart에 추가
+                    buy_list.put("banana",1500)   // 체크 되어있는걸 myCart에 추가
                     price += 1500
                 }
+                // 구매목록 데이터베이스에 체크안된 항목 제거하기
                 else{
-                    myCart.remove("banana") // 장바구니에 있을 수 있기 때문에 체크 안되어 있으면 myCart에서 제거
+                    buy_list.remove("banana") // 장바구니에 있을 수 있기 때문에 체크 안되어 있으면 myCart에서 제거
                 }
                 if(checkBox_apple.isChecked){
-                    myCart.put("apple",1000)
+                    buy_list.put("apple",1000)
                     price += 1000
                 }else{
-                    myCart.remove("apple")
+                    buy_list.remove("apple")
                 }
                 if(checkBox_wm.isChecked){
-                    myCart.put("watermelon",3000)
+                    buy_list.put("watermelon",3000)
                     price += 3000
                 }else{
-                    myCart.remove("watermelon")
+                    buy_list.remove("watermelon")
                 }
-                myCart.put("price", price)
+                buy_list.put("price", price)
 
-                // 새롭게 업데이트된 myCart를 데이터베이스에 업데이트
-                db.collection("my").document("cart")
-                    .set(myCart)
+                // 새롭게 업데이트된 buy_list를 구매목록 데이터베이스에 업데이트
+                db.collection("m").document("buy")
+                    .set(buy_list)
                     .addOnSuccessListener { }
                     .addOnFailureListener { }
                 var intent = Intent(this, Buy::class.java)

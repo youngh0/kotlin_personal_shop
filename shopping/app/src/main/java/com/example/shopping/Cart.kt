@@ -22,6 +22,7 @@ class Cart : AppCompatActivity() {
 
         // firestore이용을 위한 변수
         val db = FirebaseFirestore.getInstance()
+        // 장바구니 데이터베이스 collection 주소
         val docRef = db.collection("my").document("cart")
 
         // 내 장바구니 데이터 베이스에 있는 목록들의 visibility를 visible로 변환
@@ -72,33 +73,31 @@ class Cart : AppCompatActivity() {
 
             // 하나라도 체크 되어 있으면 실행
             else{
-                // 만약 체크 되어 있으면 데이터 베이스에 추가
-                // 체크 안되어 있으면 장바구니 목록에서 제거해서 체크 한거만 구매목록에 넘어가게 해줌.
+                // 만약 체크 되어 있으면 구매목록 데이터 베이스에 추가
+                // 체크 안되어 있으면 구매목록 목록에서 제거해서
+                // 결과적으로 체크 한거만 구매목록에 넘어가게 해줌.
                 if(checkBox_banana.isChecked){
-                    myCart.put("banana",1500)
+                    buy_list.put("banana",1500)
                     price += 1500
                 }else{
-                    myCart.remove("banana")
+                    buy_list.remove("banana")
                 }
                 if(checkBox_apple.isChecked){
-                    myCart.put("apple",1000)
+                    buy_list.put("apple",1000)
                     price += 1000
                 }else{
-                    myCart.remove("apple")
+                    buy_list.remove("apple")
                 }
                 if(checkBox_wm.isChecked){
-                    myCart.put("watermelon",3000)
+                    buy_list.put("watermelon",3000)
                     price += 3000
                 }else{
-                    myCart.remove("watermelon")
+                    buy_list.remove("watermelon")
                 }
-                myCart.put("price", price)
-                // 내 데이터베이스에 myCart저장
-                db.collection("my").document("cart")
-                    .set(myCart)
-                    .addOnSuccessListener { }
-                    .addOnFailureListener { }
-                Toast.makeText(this, "선택하지 않은 물건은 장바구니에서 삭제 되었습니다.", Toast.LENGTH_LONG).show()
+                buy_list.put("price", price)
+                // 내 구매목록 데이터베이스에 구매목록이 저장된 buy_list업데이트
+                db.collection("m").document("buy")
+                    .set(buy_list)
                 var intent = Intent(this, Buy::class.java)
                 startActivity(intent)
             }
