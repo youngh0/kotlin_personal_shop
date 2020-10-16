@@ -30,12 +30,12 @@ class MainActivity : AppCompatActivity() {
                 price = 0
                 // 구매목록 데이터베이스에 체크 된 항목 추가하기
                 if(checkBox_banana.isChecked){
-                    buy_list.put("banana",1500)   // 체크 되어있는걸 myCart에 추가
+                    buy_list.put("banana",1500)   // 체크 되어있는걸 buy_list에 추가
                     price += 1500
                 }
                 // 구매목록 데이터베이스에 체크안된 항목 제거하기
                 else{
-                    buy_list.remove("banana") // 장바구니에 있을 수 있기 때문에 체크 안되어 있으면 myCart에서 제거
+                    buy_list.remove("banana") // buy_list에 있을 수 있기 때문에 체크 안되어 있으면 buy_list에서 제거
                 }
                 if(checkBox_apple.isChecked){
                     buy_list.put("apple",1000)
@@ -54,8 +54,6 @@ class MainActivity : AppCompatActivity() {
                 // 새롭게 업데이트된 buy_list를 구매목록 데이터베이스에 업데이트
                 db.collection("m").document("buy")
                     .set(buy_list)
-                    .addOnSuccessListener { }
-                    .addOnFailureListener { }
                 var intent = Intent(this, Buy::class.java)
                 startActivity(intent)
             }

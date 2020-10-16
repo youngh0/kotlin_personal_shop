@@ -73,25 +73,29 @@ class Cart : AppCompatActivity() {
 
             // 하나라도 체크 되어 있으면 실행
             else{
+                price = 0
                 // 만약 체크 되어 있으면 구매목록 데이터 베이스에 추가
                 // 체크 안되어 있으면 구매목록 목록에서 제거해서
                 // 결과적으로 체크 한거만 구매목록에 넘어가게 해줌.
                 if(checkBox_banana.isChecked){
                     buy_list.put("banana",1500)
                     price += 1500
-                }else{
+                }
+                else{
                     buy_list.remove("banana")
                 }
                 if(checkBox_apple.isChecked){
                     buy_list.put("apple",1000)
                     price += 1000
-                }else{
+                }
+                else{
                     buy_list.remove("apple")
                 }
                 if(checkBox_wm.isChecked){
                     buy_list.put("watermelon",3000)
                     price += 3000
-                }else{
+                }
+                else{
                     buy_list.remove("watermelon")
                 }
                 buy_list.put("price", price)
