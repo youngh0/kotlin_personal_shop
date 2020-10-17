@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:background="#F3F3F3"
     android:orientation="vertical"
     tools:context=".Cart">
 
@@ -30,6 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_weight="1"
+            android:layout_marginLeft="15dp"
             android:text="" />
 
         <ImageView
@@ -69,6 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_weight="1"
+            android:layout_marginLeft="15dp"
             android:text="" />
 
         <ImageView
@@ -106,6 +109,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_weight="1"
+            android:layout_marginLeft="15dp"
             android:text="" />
 
         <ImageView
@@ -133,28 +137,44 @@
         android:layout_centerInParent="true"
         android:layout_marginBottom="10dp"
         android:background="#F1F1F1" />
-
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/cart_to_buy"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="#0092FD"
+        android:background="@drawable/buy_btn"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:text="구매"/>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:gravity="center">
-        <Button
-            android:id="@+id/cart_to_buy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="구매"/>
+
         <Button
             android:id="@+id/cart_to_home"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:textColor="#0092FD"
+            android:background="@drawable/buy_btn"
+            android:textSize="20dp"
+            android:textAllCaps="false"
             android:text="홈으로"/>
         <Button
+            android:layout_marginLeft="50dp"
             android:id="@+id/remove_item"
-            android:layout_width="wrap_content"
+            android:textColor="#0092FD"
+            android:background="@drawable/buy_btn"
+            android:textSize="20dp"
+            android:textAllCaps="false"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+
             android:text="삭제"/>
     </LinearLayout>
 </LinearLayout>

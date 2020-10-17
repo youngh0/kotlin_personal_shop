@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             if(!checkBox_apple.isChecked) count += 1
             if(!checkBox_wm.isChecked) count += 1
             if(count == 3){ // 아무것도 체크 안한 경우
-                Toast.makeText(this,"아무것도 선택하지 않았습니다.",Toast.LENGTH_LONG).show()
+                Toast.makeText(this,"아무것도 선택하지 않았습니다.",Toast.LENGTH_SHORT).show()
 
             }else{ // 바로 구매를 누르는 경우여서 price변수를 0으로 초기화
                 price = 0
@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
             if(!checkBox_apple.isChecked) count += 1
             if(!checkBox_wm.isChecked) count += 1
             if(count == 3){
-                Toast.makeText(this,"아무것도 선택하지 않았습니다.",Toast.LENGTH_LONG).show()
+                Toast.makeText(this,"아무것도 선택하지 않았습니다.",Toast.LENGTH_SHORT).show()
             }else{
 
                 // 기존에 장바구니에 있는 품목들은 그대로 유지된 상태에서 체크 한 품목을 장바구니에 업데이트 하기 위한 부분
@@ -109,7 +109,7 @@ class MainActivity : AppCompatActivity() {
                         db.collection("my").document("cart")
                             .set(myCart)
                             .addOnSuccessListener {
-                                Toast.makeText(this,"추가 완료!",Toast.LENGTH_LONG).show()
+                                Toast.makeText(this,"추가 완료!",Toast.LENGTH_SHORT).show()
                             }
 
                     }

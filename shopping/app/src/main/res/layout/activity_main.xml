@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F3F3F3"
     tools:context=".MainActivity">
 
     <TextView
@@ -12,35 +13,53 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center_horizontal"
-        android:text="상품 목록"
+        android:text="영호의 과일가게"
         android:textSize="30dp"
         android:textStyle="bold" />
+    <Button
+        android:id="@+id/button_buy"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:textColor="#0092FD"
+        android:background="@drawable/buy_btn"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:text="구매" />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="30dp">
-        <Button
-            android:id="@+id/button_buy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="20dp"
-            android:text="구매" />
+
         <Button
             android:id="@+id/button_cart"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
             android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:textColor="#0092FD"
+            android:background="@drawable/buy_btn"
+            android:textSize="20dp"
+            android:textAllCaps="false"
             android:text="장바구니" />
         <Button
             android:id="@+id/add_cart"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="20dp"
+            android:layout_marginRight="30dp"
+            android:textColor="#0092FD"
+            android:background="@drawable/buy_btn"
+            android:textSize="20dp"
+            android:textAllCaps="false"
+
             android:text="장바구니 추가"/>
 
     </RelativeLayout>
@@ -59,6 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
+            android:layout_marginLeft="15dp"
             android:layout_weight="1"
             android:text="" />
 
@@ -95,6 +115,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_weight="1"
+            android:layout_marginLeft="15dp"
             android:text="" />
 
         <ImageView
@@ -129,6 +150,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
+            android:layout_marginLeft="15dp"
             android:layout_weight="1"
             android:text="" />
 

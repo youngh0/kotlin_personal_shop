@@ -68,7 +68,7 @@ class Cart : AppCompatActivity() {
 
             // 아무것도 체크 안하고 클릭 시 toast메시지 출력
             if(count == 3){
-                Toast.makeText(this, "아무것도 선택하지 않았습니다.", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, "아무것도 선택하지 않았습니다.", Toast.LENGTH_SHORT).show()
             }
 
             // 하나라도 체크 되어 있으면 실행
@@ -127,7 +127,7 @@ class Cart : AppCompatActivity() {
             db.collection("my").document("cart")
                 .set(myCart)
                 .addOnSuccessListener {
-                    Toast.makeText(this, "삭제 완료!", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "삭제 완료!", Toast.LENGTH_SHORT).show()
 
                     // 삭제된 장바구니 목록을 바로 보여주기 위한 액티비티 새로고침 코
                     val intent = intent
