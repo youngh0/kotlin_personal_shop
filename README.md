@@ -49,3 +49,12 @@
    <li>홈으로 버튼 클릭 시 MainActivity로 이동</li>
 </ul>
 
+<h3>data.kt(각종 데이터 선언)</h3>
+
+<ul>
+    <li>buy_list : 구매목록 HashMap변수, 이 변수를 통해 구매목록 db관리</li>
+    <li>myCart : 장바구니목록 HashMap변수, 이 변수를 통해 장바구니목록 db관리</li>
+    <li>price : 구매화면에서 가격 총합을 나타내주는 변수</li>
+    
+</ul>
+
