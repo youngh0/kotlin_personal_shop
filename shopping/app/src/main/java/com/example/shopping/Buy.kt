@@ -70,12 +70,11 @@ class Buy : AppCompatActivity() {
         finally_buy.setOnClickListener {
             // 주소,연락처 입력창 체크하는 validate호출
             if (validate()){
-                Toast.makeText(this,"구매 완료",Toast.LENGTH_SHORT).show()
                 val docRef1 = db.collection("m").document("buy")
                 docRef1.get()
                     .addOnSuccessListener { document ->
                         if (document != null) {
-                            // 데이터 베이스의 key값에서 banana,apple,watermelon을 확인 후 null값이 아니라면 visibility를 visible로 변환 해서 목록 보여주기
+                            // 구매완료 시 장바구니 목록과 구매한 품목 비교 후 동일한 품목이 있다면 장바구니db에서 제거 후 장바구니db최신화
                             if(document.data?.get("banana").toString() != "null"){
                                 myCart.remove("banana")
                             }
