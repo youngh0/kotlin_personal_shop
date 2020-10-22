@@ -9,7 +9,7 @@
 <hr>
 <h1>각 activity별 설명</h1>
 <h3>MainActivity</h3>
-    
+![스크린샷 2020-10-23 오전 12 37 00](https://user-images.githubusercontent.com/62167801/96896562-9c1b9480-14c8-11eb-9751-7964f5eb8c7a.png)
 <ul>
     <li>원하는 상품 체크 후 구매 버튼 클릭시 firestore의 구매목록 db에 저장 후 구매 activity로 이동</li>
     <li>원하는 상품 체크 후 장바구니 추가 버튼 클릭 시
