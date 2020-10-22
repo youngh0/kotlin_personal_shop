@@ -1,12 +1,12 @@
 # kotlin_personal_shop
 <h1>간단한 과제 설명</h1>
 <p>firebase연동을 통한 간단한 상품 구매 어플 만들기</p>
-<hr>
+
 <h1>실행 시 주의점</h1>
 <ul>
     <li>emulator: Pixel 2 API 30버전으로 실행해야 firestore연동 가</li>
 </ul>
-<hr>
+
 <h1>각 activity별 설명</h1>
 <h3>MainActivity</h3>
 <ul>
