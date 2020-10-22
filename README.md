@@ -19,7 +19,7 @@
     Toast메시지 출력</li>
 </ul>
 <h3>CartActivity</h3>
-<p>
+
 <ul>
     <li>activity create시 장바구니 db에서 정보를 가져와 화면에 장바구니 목록 출력</li>
 
@@ -30,9 +30,9 @@
     <li>만약 아무것도 체크 하지 않고 구매나 삭제 버튼 클릭 시 아무것도 체크 되지 않았다는 Toast메시지 출력</li>
     <li>홈으로 버튼 클릭 시 MainActivity로 이동</li>
 </ul>
-</p>
+
 <h3>BuyActivity</h3>
-<p>
+
 <ul>
     <li>activity create시 구매목록 db에서 정보를 가져와 화면에 출력</li>
 
@@ -45,4 +45,4 @@
 
     <li>홈으로 버튼 클릭 시 MainActivity로 이동</li>
 </ul>
-</p>
+
