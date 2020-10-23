@@ -9,7 +9,7 @@
 
 <h1>실행 시 주의점</h1>
 <ul>
-    <li>emulator: Pixel 2 API 30버전으로 실행해야 firestore연동 가</li>
+    <li>emulator: Pixel 2 API 30버전으로 실행해야 firestore연동 가능</li>
 </ul>
 
 <h1>각 activity별 설명</h1>
