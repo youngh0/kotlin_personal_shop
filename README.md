@@ -1,6 +1,7 @@
 # kotlin_personal_shop
 <h1>간단한 과제 설명</h1>
 <ul>
+    <li>사용 언어 : kotlin</li>
     <li>firebase연동을 통한 간단한 상품 구매 어플 만들기</li>
     <li>firestore에서 구매목록,장바구니목록 collection 2개를 이용하여 db관리</li>
         
